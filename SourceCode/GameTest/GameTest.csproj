@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B135521C-9875-4B9E-A0F5-2EA5A7ADBD3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameTest</RootNamespace>
+    <AssemblyName>GameTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\GameElements\Fighter.cs" />
+    <Compile Include="Game\GameElements\ICanHaveWeapon.cs" />
+    <Compile Include="Game\GameElements\Player.cs" />
+    <Compile Include="Game\GameElements\PlayerStates\Direction.cs" />
+    <Compile Include="Game\GameElements\PlayerStates\IdleState.cs" />
+    <Compile Include="Game\GameElements\PlayerStates\MoveState.cs" />
+    <Compile Include="Game\GameElements\PlayerStates\PlayerState.cs" />
+    <Compile Include="Game\GameElements\Team.cs" />
+    <Compile Include="Game\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Game\MainFrame\Game.cs" />
+    <Compile Include="Game\GameElements\GameObject.cs" />
+    <Compile Include="Game\MainFrame\GameModes\Deathmatch.cs" />
+    <Compile Include="Game\MainFrame\GameModes\FreeGame.cs" />
+    <Compile Include="Game\MainFrame\GameModes\GameMode.cs" />
+    <Compile Include="Game\MainFrame\GameModes\MoneyMaker.cs" />
+    <Compile Include="Game\MainFrame\ImageDrawnEventArgs.cs" />
+    <Compile Include="Game\MainFrame\PickupFactory.cs" />
+    <Compile Include="Game\MainFrame\Renderer.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\FlameThrowerPickup.cs" />
+    <Compile Include="Game\PickUps\EffectPickups\MoneyPickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\PistolPickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\RocketLauncherPickup.cs" />
+    <Compile Include="Game\PickUps\EffectPickups\ShieldPickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\TentaclePickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\TwisterPickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickup.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\WingsPickup.cs" />
+    <Compile Include="Game\Weapons\Cannon.cs" />
+    <Compile Include="Game\PickUps\WeaponPickups\CannonPickup.cs" />
+    <Compile Include="Game\PickUps\EffectPickups\HealthPickup.cs" />
+    <Compile Include="Game\PickUps\PickUp.cs" />
+    <Compile Include="Game\PickUps\PickUpType.cs" />
+    <Compile Include="Game\Weapons\Bullet.cs" />
+    <Compile Include="Game\Weapons\Explosive.cs" />
+    <Compile Include="Game\Weapons\Flamethrower.cs" />
+    <Compile Include="Game\Weapons\Pistol.cs" />
+    <Compile Include="Game\Weapons\RocketLauncher.cs" />
+    <Compile Include="Game\Weapons\Tentacles.cs" />
+    <Compile Include="Game\Weapons\Twister.cs" />
+    <Compile Include="Game\Weapons\Weapon.cs" />
+    <Compile Include="Game\Weapons\Wings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\GameBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\GameBuilderForm.Designer.cs">
+      <DependentUpon>GameBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\CustomizeBotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\CustomizeBotControl.Designer.cs">
+      <DependentUpon>CustomizeBotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\CustomizePlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\CustomizePlayerControl.Designer.cs">
+      <DependentUpon>CustomizePlayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\TeamStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GameBuilderForm\UserControls\TeamStrip.Designer.cs">
+      <DependentUpon>TeamStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\QuickStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\QuickStartForm.Designer.cs">
+      <DependentUpon>QuickStartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms\StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms\WindowStyle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Game\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GameBuilderForm\GameBuilderForm.resx">
+      <DependentUpon>GameBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GameBuilderForm\UserControls\CustomizeBotControl.resx">
+      <DependentUpon>CustomizeBotControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GameBuilderForm\UserControls\CustomizePlayerControl.resx">
+      <DependentUpon>CustomizePlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GameBuilderForm\UserControls\TeamStrip.resx">
+      <DependentUpon>TeamStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\QuickStartForm.resx">
+      <DependentUpon>QuickStartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms\StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HealthPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CannonPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShieldPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlamethrowerPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TentaclePickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Game\WPF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RocketLauncherPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyPickup.png" />
+    <None Include="Resources\PistolPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WingsPickup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwisterPickup.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
