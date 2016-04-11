@@ -49,6 +49,7 @@
             // 
             // NoOfPlayers
             // 
+            this.NoOfPlayers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NoOfPlayers.FormattingEnabled = true;
             this.NoOfPlayers.Items.AddRange(new object[] {
             "Only Bots",
@@ -64,6 +65,7 @@
             // 
             // GameMode
             // 
+            this.GameMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GameMode.FormattingEnabled = true;
             this.GameMode.Items.AddRange(new object[] {
             "Free Roam",
@@ -78,6 +80,7 @@
             // 
             // TeamNumber
             // 
+            this.TeamNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TeamNumber.FormattingEnabled = true;
             this.TeamNumber.Items.AddRange(new object[] {
             "2 Teams",
@@ -92,6 +95,7 @@
             // 
             // Pickups
             // 
+            this.Pickups.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pickups.FormattingEnabled = true;
             this.Pickups.Items.AddRange(new object[] {
             "Few Pickups",
@@ -107,6 +111,7 @@
             // 
             // Respawn
             // 
+            this.Respawn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Respawn.FormattingEnabled = true;
             this.Respawn.Items.AddRange(new object[] {
             "Fast",
@@ -129,6 +134,7 @@
             // 
             // BotNumber
             // 
+            this.BotNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BotNumber.FormattingEnabled = true;
             this.BotNumber.Items.AddRange(new object[] {
             "No Bots",
@@ -144,6 +150,7 @@
             // 
             // Points
             // 
+            this.Points.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Points.FormattingEnabled = true;
             this.Points.Items.AddRange(new object[] {
             "50   Points",
